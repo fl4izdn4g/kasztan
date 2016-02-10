@@ -8,7 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel 
+            VerticalAlignment="Center" HorizontalAlignment="Center"
+            Name="TextStack" DoubleTapped="TextStack_DoubleTapped" Orientation="Horizontal">
+        </StackPanel>
+        <StackPanel Grid.Row="1" Name="NapisInputContainer" Margin="10,10,10,10">
+            <TextBlock FontSize="30">Co chcesz napisać?</TextBlock>
+            <TextBox Name="NapisTextBox" KeyDown="NapisTextBox_KeyDown"></TextBox>
+        </StackPanel>
     </Grid>
 </Page>
